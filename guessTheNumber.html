@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="guessTheNumber.css" rel="stylesheet">
+    <link rel="stylesheet" href="guessTheNumber.css">
     <title>Guess The Number</title>
 </head>
-
 <body>
-    <h1>Guess The Number</h1>
-    <div>
-        <h2>Try to guess the number between 1-10 </h2>
-        <input type="number" id="userGuess">
-        <input type="submit" id="buttonSubmit" value="Submit">
-        <div id="output"></div>
-        <div id="result"></div>
-        
+    <h1 id="title">Guess The Number Game</h1>
+    <div id="level">
+        <label for="selectedLevel" id="levelValue">Select level: </label>
+        <select name="selectedLevel" class="selectedLevel">
+            <option value="Easy">1-10</option>
+            <option value="Medium">1-50</option>
+            <option value="Hard">1-100</option>
+        </select>
+        <input type="submit" id="playButton" value="Play">
     </div>
+    <div id="game">
+        <h2 id="subtitle">Enter the number: </h2>
+        <input type="number" id="userNum">
+        <input type="submit" id="button" value="Submit">
+        <div id="triesLeft"></div>
+        <div id="output"></div>
+    </div>
+    <input type="submit" id="reset" value="reset">
     <script src="guessTheNumber.js"></script>
-    
 </body>
 </html>
